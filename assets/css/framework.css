@@ -1,0 +1,44 @@
+:root{
+    --blue-color:#0075ff;
+    --blue-alt-color:#0d69d5;
+    --orange-color:#f59e0b;
+    --green-color:#22e55c;
+    --red-color:#f44336;
+    --gray-color:#888
+
+
+}
+
+/* =========================================== */
+
+
+
+.d-flex{
+    display: flex;
+}
+/* start padding */
+.p-20{
+    padding: 20px;
+}
+/* end padding */
+
+/* start margin */
+.m-20{
+    margin: 20px;
+}
+/* end margin */
+/* start position */
+.p-relative{
+    position: relative;
+}
+/* end position */
+/* start color */
+.bg-white{
+    background-color: #fff;
+}
+/* end color */
+/* icons */
+    .fa-fw{
+        font: 14px;
+    }
+/* icons */
