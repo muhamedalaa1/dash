@@ -171,7 +171,7 @@ aside ul li i{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: rgb(239, 247, 247);
     padding: 20px;
 }
 .content .navbar .nav-input{
@@ -189,6 +189,7 @@ aside ul li i{
     outline: none;
     width: 130px;
     transition: 0.3s all ease;
+    background-color: transparent;
 
 }
 .content .navbar .nav-input input:focus {
@@ -1638,3 +1639,990 @@ font-size: 17px;
 }
 /* end backup */
 /* end settings */
+
+/* start profile */
+
+/* start general info */
+.profile .profile-parent{
+    margin: 0 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.profile .profile-parent  .general-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    grid-column: 1/3;
+}
+.profile .profile-parent  .general-info .left-info{
+    text-align: center;
+   width: 300px;
+    border-right: 1px solid #eee;
+    padding: 20px;
+}
+.profile .profile-parent  .general-info .left-info img{
+    width: 120px;
+
+}
+.profile .profile-parent  .general-info .left-info span{
+    display: block;
+
+}
+.profile .profile-parent  .general-info .left-info span:first-of-type{
+    font-size: 21px;
+    font-weight: 700;
+}
+.profile .profile-parent  .general-info .left-info span:nth-of-type(2){
+    color: var(--gray-color);
+    margin: 8px 0;
+}
+.profile .profile-parent  .general-info .left-info .info-prog{
+    width: 60%;
+    margin: auto;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.profile .profile-parent  .general-info .left-info .info-prog span{
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 5px;
+}
+.profile .profile-parent  .general-info .left-info .star-icns{
+    margin: 10px 0;
+}
+.profile .profile-parent  .general-info .left-info .star-icns i{
+    color: #F59E0B;
+    font-size: 13px;
+}
+.profile .profile-parent  .general-info .left-info span:last-child{
+    color: var(--gray-color);
+    font-size: 13px;
+}
+
+.profile .profile-parent  .general-info .right-info{
+    flex: 1;
+    
+}
+.profile .profile-parent  .general-info .right-info .all-info{
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.profile .profile-parent  .general-info .right-info .all-info:last-child{
+    padding: 20px;
+    border-bottom: none;
+}
+.profile .profile-parent  .general-info .right-info .all-info p{
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+.profile .profile-parent  .general-info .right-info .all-info .personal-info{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.profile .profile-parent  .general-info .right-info .all-info .personal-info p{
+    min-width: 250px;
+    margin-bottom: 5px;
+}
+.profile .profile-parent  .general-info .right-info .all-info .personal-info p span{
+    color: black;
+    font-weight: 400;
+}
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 19px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+.toggle-switch::before{
+    content: "\f00d";
+    font-family: "Font Awesome 6 free";
+    font-weight: 900;
+    background-color: #fff;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    left: 5px;
+    color: #aaa;
+    transition: 0.3s all ease;
+    font-size: 10px;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+    content: "\f00c";
+    left: 60px;
+    color: var(--blue-color);
+    font-size: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .profile .profile-parent .general-info .left-info {
+        
+        width: 260px;
+     
+        padding: 0;
+}
+}
+
+@media screen and (max-width:830px) {
+    .profile .profile-parent  .general-info{
+        flex-direction: column;
+    }
+    .profile .profile-parent  .general-info .left-info{
+        
+        border-right: none;
+        
+    }
+    .profile .profile-parent {
+        margin: 0 10px;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .profile .profile-parent .general-info .left-info img {
+        width: 90px;
+    }
+    .profile .profile-parent .general-info {
+        padding: 10px 0;
+        
+    }
+    .profile .profile-parent .general-info .right-info .all-info {
+        padding: 10px;
+        
+    }
+    .profile .profile-parent .general-info .right-info .all-info:last-child {
+        padding: 10px;
+        border-bottom: none;
+    }
+}
+/* end general info */
+
+/* start skills */
+.profile-skills{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: 1/2;
+}
+.profile-skills .prog-skills{
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    text-transform: capitalize;
+}
+.profile-skills .prog-skills:last-child{
+    padding: 15px 0 0 0;
+    border-bottom: none;
+    
+}
+.profile-skills .prog-skills span{
+    
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 6px;
+
+}
+@media screen and (max-width:767px) {
+    .profile-skills .prog-skills {
+        
+        text-align: center;
+    }
+}
+/* end skills */
+
+
+/* start activity */
+.activities{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: 2/3;
+}
+.activities .activity-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.activities .activity-row:last-child{
+    border-bottom: none;
+    padding: 20px 0 0 0;
+}
+
+.activities .activity-row .act-left-row img{
+    width: 75px;
+    margin-right: 10px;
+
+}
+.activities .activity-row .act-left-row{
+    display: flex;
+    align-items: center;
+
+}
+
+.activities .activity-row .act-left-row .left-row-txt span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.activities .activity-row .act-left-row .left-row-txt p{
+  
+    color: var(--gray-color);
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 5px;
+
+}
+
+.activities .activity-row .act-right-row span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.activities .activity-row .act-right-row p{
+    color: var(--gray-color);
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:930px) {
+    .general-info{
+        grid-column: 1/3;
+    }
+    .profile-skills{
+        grid-column: 1/3;
+    }
+    .activities{
+        grid-column: 1/3;
+    }
+}
+@media screen and (max-width:550px) {
+    .activities .activity-row .act-left-row .left-row-txt p {
+        
+        font-size: 14px;
+    }
+    .activities .activity-row .act-right-row p {
+        
+        font-size: 14px;
+       
+    }
+    .activities .activity-row .act-left-row .left-row-txt span {
+        font-size: 16px;
+       
+    }
+    .activities .activity-row .act-right-row span {
+        font-size: 16px;
+        
+    }
+    .activities .activity-row .act-left-row img {
+        width: 60px;
+        margin-right: 10px;
+    }
+    .activities .activity-row {
+        
+        padding: 15px 0;
+        
+    }
+}
+@media screen and (max-width:430px) {
+    .activities .activity-row {
+        
+        flex-direction: column;
+    }
+    .activities .activity-row .act-left-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .activities .activity-row .act-left-row img {
+        margin-right: 0px;
+    }
+    .act-right-row {
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+
+/* end activity */
+/* end profile */
+
+/* start projects */
+    .project-parent{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+        gap: 20px;
+        margin: 0 20px;
+    }
+    .project-card{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+    }
+   
+    .project-card .project-card-head p{
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .project-card .project-card-head p:last-of-type{
+        color: var(--gray-color);
+        font-size: 15px;
+        margin: 0;
+    }
+    .project-card .project-card-head .proj-card-imgs{
+        margin-top: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .project-card .project-card-head .proj-card-imgs img{
+        width: 37px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+    .project-card .project-card-head .proj-card-imgs img:not(:first-child){
+        margin-left: -17px;
+    }
+
+    .project-card .project-card-body{
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+        text-align: right;
+    
+    }
+    .project-card .project-card-body span{
+        padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #eee;
+    border-radius: 6px;
+    }
+
+    .project-card .project-card-foot{
+        padding: 20px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .project-card .project-card-foot .proj-card-prog{
+        width: 35%;
+        height: 7px;
+        background-color: #eee;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    .project-card .project-card-foot .proj-card-prog > span{
+        display: block;
+        /* width: 60%; */
+        background-color: #F44336;
+        height: 100%;
+        border-radius: 6px;
+    }
+    .project-card .project-card-foot >span{
+        color: var(--gray-color);
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .project-card .card-birth{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--gray-color);
+    }
+    .project .project-card:nth-child(2) .proj-card-prog > span,
+    .project .project-card:nth-child(4) .proj-card-prog > span,
+    .project .project-card:nth-child(6) .proj-card-prog > span,
+    .project .project-card:nth-child(8) .proj-card-prog > span,
+    .project .project-card:nth-child(9) .proj-card-prog > span{
+
+        background-color: var(--green-color);
+    }
+    .project .project-card:nth-child(2) .proj-card-prog > span,
+    .project .project-card:nth-child(3) .proj-card-prog > span,
+    .project .project-card:nth-child(5) .proj-card-prog > span{
+
+        background-color: var(--blue-color);
+    }
+       
+    
+
+    @media screen and (max-width:767px) {
+        .project-parent{
+            display: grid;
+            grid-template-columns: minmax(200px,1fr);
+            gap: 10px;
+            margin: 0 10px;
+        }
+        .project-card .project-card-body span {
+            
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+    }
+/* end projects */
+
+
+/* start course */
+.courses-parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    margin: 0 20px;
+}
+.course-card{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.course-card img{
+    width: 100%;
+}
+.course-card .course-card-body{
+    padding: 20px;
+    margin-bottom: 30px;
+
+
+}
+.course-card .course-card-body h3{
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.course-card .course-card-body p{
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.course-card .course-card-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray-color);
+    font-size: 14px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    position: relative;
+
+}
+.course-card .course-card-foot span.profile-icn{
+    position: relative;
+}
+.course-card .course-card-foot span.profile-icn::before{
+    content: "\f007";
+    font-family: "Font Awesome 6 free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+.course-card .course-card-foot span.dollar-icn{
+    position: relative;
+}
+.course-card .course-card-foot span.dollar-icn::before{
+    content: "\24";
+    font-family: "Font Awesome 6 free";
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.course-card .course-card-foot .course-info{
+    position: absolute;
+    color: #fff;
+    background-color: var(--blue-color);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px;
+    border-radius: 6px;
+    top: -14px;
+}
+.course-card .avatar-course-card{
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    outline: 1px solid #fff;
+}
+/* end course */
+
+
+/* satrt friedns */
+.friends-parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    margin: 0 20px;
+}
+.friends-card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.friends-card .friends-card-head{
+    text-align: center;
+    position: relative;
+
+}
+.friends-card .friends-card-head .head-icns{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.friends-card .friends-card-head .head-icns i{
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--gray-color);
+    transition: 0.3s all ;
+
+}
+.friends-card .friends-card-head .head-icns i:hover{
+    background-color: var(--blue-alt-color);
+    color: #fff;
+
+}
+.friends-card .friends-card-head img{
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.friends-card .friends-card-head h3{
+    font-size: 17px;
+}
+.friends-card .friends-card-head p{
+    color: var(--gray-color);
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.friends-card .friends-card-body{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.friends-card .friends-card-body li:nth-child(2){
+   margin: 15px 0;
+}
+.friends-card .friends-card-body li:nth-child(2):before{
+    content: "\f828";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+.friends-card .friends-card-body li:first-child:before{
+   content: "\f5b8";
+   font-family: "Font Awesome 6 Free";
+   font-weight: 900;
+   margin-right: 10px;
+}
+.friends-card .friends-card-body li:last-child:before{
+   content: "\f1ea";
+   font-family: "Font Awesome 6 Free";
+   font-weight: 900;
+   margin-right: 10px;
+}
+.friends-card .friends-card-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.friends-card .friends-card-foot p{
+    font-size: 14px;
+    color: var(--gray-color);
+    font-weight: 400;
+}
+
+.friends-card .friends-card-foot .foot-btns a:first-of-type{
+    color: #fff;
+    background-color: var(--blue-color);
+    font-size: 14px;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+.friends-card .friends-card-foot .foot-btns a:last-of-type{
+    color: #fff;
+    background-color: var(--red-color);
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+@media screen and (max-width:767px) {
+    .friends-card .friends-card-body{
+        text-align: center;
+    }
+    .friends-card {
+        
+        padding: 10px;
+        
+    }
+    .friends-parent {
+        
+        gap: 10px;
+        margin: 0 10px;
+    }
+    .friends-card .friends-card-foot {
+        
+        padding-top: 15px;
+    }
+    .friends-card .friends-card-foot .foot-btns a:last-of-type {
+       
+        padding: 2px 4px;
+       
+        font-size: 13px;
+    }
+    .friends-card .friends-card-foot .foot-btns a:first-of-type {
+        padding: 2px 4px;
+       
+        font-size: 13px;
+    }
+    .friends-card .friends-card-body {
+        
+        padding: 13px 0;
+       
+    }
+    
+}
+@media screen and (max-width:430px) {
+    .friends-card .friends-card-foot{
+        flex-direction: column;
+    }
+    .friends-card .friends-card-foot p{
+        margin-bottom: 10px;
+    }
+    .friends-card .friends-card-head img {
+        width: 80px;
+        
+    }
+    .friends-card .friends-card-head .head-icns i {
+       
+        padding: 6px;
+        
+        font-size: 14px;
+    }
+}
+/* end friedns */
+
+/* start files */
+.file-page{
+    display: flex;
+    gap: 20px;
+}
+.files-parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    margin-left: 20px ;
+    flex: 1;
+
+}
+.file-card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.file-card:hover .file-head img{
+   transform: rotate(6deg);
+}
+.file-card .file-head{
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+.file-card .file-head img{
+    width: 75px;
+    transition: 0.3s all;
+}
+.file-card .file-head p{
+    margin: 10px 0;
+    font-weight: 600;
+}
+.file-card i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--gray-color);
+}
+.file-card .file-head span{
+    position: absolute;
+    left: 0;
+    color: var(--gray-color);
+}
+.file-card .file-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #eee;
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.file-page .files-statics{
+    min-width: 250px;
+    height: 460px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.file-page .files-statics h3{
+    font-size: 24px;
+    margin-bottom: 19px;
+}
+.file-page .files-statics .static-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.file-page .files-statics .static-row .static-row-left{
+    display: flex;
+    align-items: center;
+}
+.file-page .files-statics .static-row .static-row-left i{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: var(--blue-color);
+    background-color: #CCE3FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-page .files-statics .static-row .static-row-left .left-row-txt p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.file-page .files-statics .static-row .static-row-left .left-row-txt span{
+    color: var(--gray-color);
+    font-size: 13px;
+
+}
+.file-page .files-statics .static-row >span{
+    color: var(--gray-color);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.files-statics a{
+    display: block;
+    background-color: var(--blue-color);
+    width: fit-content;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+.files-statics a:hover >i{
+    animation: arrow-static 0.3s alternate infinite;
+}
+.files-statics a i{
+    font-size: 14px;
+    margin-right: 10px;
+    
+}
+@keyframes arrow-static {
+    from{
+        transform: translateY(3px);
+    }
+    to{
+        transform: translateY(-3px);
+    }
+}
+
+
+@media screen and (max-width:940px) {
+    .file-page{
+        flex-direction: column;
+    }
+    .file-page .files-statics{
+        order: 1;
+        margin:0 20px;
+    }
+    .files-parent{
+        order: 2;
+        margin: 0 20px;
+    }
+    
+}
+/* end files */
+
+/* start plans */
+.plans-parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+    margin: 0 20px;
+}
+.plans-card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.plans-card .plans-card-head{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--green-color);
+    border: 5px solid #fff;
+    outline: 4px solid var(--green-color);
+    color: #fff;
+}
+.plans-card .plans-card-head h3{
+    font-size: 30px;
+}
+.plans-card .plans-card-head span{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.plans-card .plans-card-body{
+    margin: 20px 0;
+}
+.plans-card .plans-card-body .body-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.plans-card .plans-card-body .body-list:nth-child(1) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(2) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(3) > p::before
+{
+    content: "\f00c";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--green-color);
+}
+.plans-card .plans-card-body .body-list:nth-child(4) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(5) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(6) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(7) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(8) > p::before,
+.plans-card .plans-card-body .body-list:nth-child(9) > p::before
+{
+    content: "\f00d";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--red-color);
+}
+  
+
+
+.plans-card-body  .body-list a i{
+    color: gray;
+
+} 
+
+.plans-card >a{
+    color: #fff;
+    background-color: var(--green-color);
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+
+.plans-parent .two-card .plans-card-head{
+    background-color: var(--blue-color);
+    outline: 4px solid var(--blue-color);
+}
+.plans-parent .two-card .plans-card-body .body-list:nth-child(1) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(2) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(3) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(4) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(5) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(6) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(7) > p::before{
+    content: "\f00c";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--green-color);
+}
+.plans-parent .two-card .plans-card-body .body-list:nth-child(8) > p::before,
+.plans-parent .two-card .plans-card-body .body-list:nth-child(9) > p::before{
+    content: "\f00d";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--red-color);
+}
+.plans-parent .two-card > a{
+    background-color: var(--blue-color);
+}
+
+.three-card .plans-card-head{
+    background-color: var(--orange-color);
+    outline: 4px solid var(--orange-color);
+
+}
+.plans-parent .three-card .plans-card-body .body-list > p::before{
+    content: "\f00c";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--green-color);
+}
+.plans-parent .three-card > a{
+    background-color: var(--orange-color);
+}
+
+@media screen and (max-width:600px) {
+    .plans-card {
+    
+        padding: 10px;
+        
+    }
+    .plans-parent {
+        
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        gap: 10px;
+        margin: 0 10px;
+    }
+    .plans-card .plans-card-body .body-list {
+        
+        padding: 10px 0;
+        
+    }
+    .plans-card-body .body-list p{
+        font-size: 14px;
+
+    }
+   
+}
+/* end plans */
