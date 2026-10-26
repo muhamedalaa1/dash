@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {qualify,csvCell} from '../dist/scoring.mjs';
+const lead={motivation:'high',timeline:'soon',condition:'repairs',asking:80,value:100};
+test('strongest opportunity reaches 100 with an explainable sum',()=>{const r=qualify(lead);assert.equal(r.score,100);assert.equal(r.tier,'Hot');assert.equal(r.breakdown.reduce((s,x)=>s+x[1],0),r.score)});
+test('low motivation, late sale, and high asking price nurture',()=>{const r=qualify({...lead,motivation:'low',timeline:'later',condition:'ready',asking:120});assert.equal(r.score,15);assert.equal(r.tier,'Nurture')});
+test('price boundaries receive the intended points',()=>{for(const [asking,points] of [[80,20],[81,15],[95,15],[96,8],[105,8],[106,0]])assert.equal(qualify({...lead,asking}).breakdown[3][1],points)});
+test('tier boundaries',()=>{assert.equal(qualify({...lead,motivation:'medium',timeline:'quarter',condition:'cosmetic',asking:100}).tier,'Warm');assert.equal(qualify({...lead,condition:'cosmetic',asking:120}).score,75)});
+test('rejects invalid prices and categories',()=>{for(const patch of [{value:0},{asking:-1},{asking:NaN},{value:Infinity},{motivation:'other'}])assert.throws(()=>qualify({...lead,...patch}))});
+test('CSV quotes commas and neutralizes spreadsheet formulas',()=>{assert.equal(csvCell('a,"b"'),'"a,""b"""');assert.equal(csvCell('=1+1'),'"\'=1+1"');assert.equal(csvCell('Alex'),'"Alex"')});
